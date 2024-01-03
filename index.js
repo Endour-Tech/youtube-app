@@ -1,22 +1,25 @@
 // We import all modules here.
 const { app, BrowserWindow } = require("electron");
 const RPC = require("discord-rpc");
+const path = require('path');
+const { updateElectronApp } = require('update-electron-app');
 const config = require("./src/config/config.json");
 const rpc = new RPC.Client({
     transport: "ipc"
 });
+updateElectronApp();
 
 // Main function. He define title and others stuff.
 function createWindow () {
   const win = new BrowserWindow({
-    title: "YouTube Browser",
-    icon: __dirname + './src/icons/logotYT.ico',
+    title: "YouTube",
+    icon: path.join(__dirname, 'src/icons/logo.ico'), // use absolute path and include file extension
     autoHideMenuBar: true,
     width: 1280,
     height: 720,
   });
 
-  win.loadURL("https://youtube.com/");
+  win.loadURL("https://www.youtube.com/");
 
 };
 
