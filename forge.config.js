@@ -10,7 +10,7 @@ module.exports = {
     {
       name: '@electron-forge/publisher-github',
       config: {
-        authToken: "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",
+        authToken: "github_token",
         repository: {
           owner: 'endourdev',
           name: 'youtube-app'
