@@ -7,6 +7,7 @@ const config = require("./src/config/config.json");
 const rpc = new RPC.Client({
     transport: "ipc"
 });
+
 updateElectronApp();
 
 // Main function. He define title and others stuff.
