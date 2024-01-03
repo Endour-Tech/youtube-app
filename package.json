@@ -1,0 +1,40 @@
+{
+  "name": "youtube-app",
+  "version": "0.0.4",
+  "description": "YouTube Watcher",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "icon": "./src/img/logoYT.ico",
+    "appId": "io.github.football-tracker",
+    "productName": "Youtube",
+    "nsis": {
+      "artifactName": "Youtube-Watcher-Setup-${version}-x64.${ext}",
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "./src/img/logoYT.ico",
+      "uninstallerIcon": "./src/img/logoYT.ico",
+      "deleteAppDataOnUninstall": true
+    }
+  },
+  "keywords": [
+    "youtube",
+    "app",
+    "electron"
+  ],
+  "author": "Wodd",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^24.0.0",
+    "electron-builder": "^23.6.0",
+    "electron-log": "^4.4.8",
+    "electron-updater": "^5.3.0"
+  },
+  "dependencies": {
+    "discord-rpc": "^4.0.1"
+  }
+}
