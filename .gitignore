@@ -93,3 +93,6 @@ out/
 
 # Config.json
 src/config/config.json
+
+# forge config
+forge.config.js
